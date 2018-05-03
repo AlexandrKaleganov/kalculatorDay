@@ -9,7 +9,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
 import javafx.scene.input.MouseEvent;
 
 
@@ -31,7 +30,7 @@ public class Windowsstart extends Application {
         raschet = new Button("Расчёт");
         dateStart = new DatePicker();
         dateFinal = new DatePicker();
-        result = new Text("Укажите начальную и конечную дату и нажмите расчитать");
+        result = new Text("Укажите начальную и конечную дату и нажмите Расчёт");
         result.setFont(new Font(14));
         BorderPane pane = new BorderPane();
 

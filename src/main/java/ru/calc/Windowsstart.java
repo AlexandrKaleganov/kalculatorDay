@@ -23,26 +23,23 @@ public class Windowsstart extends Application {
 
     private DatePicker dateStart;
     private DatePicker dateFinal;
-    private Text result;
-
+    private Text otstup;
 
     public void start(Stage primaryStage) throws Exception {
         raschet = new Button("Расчёт");
         dateStart = new DatePicker();
         dateFinal = new DatePicker();
-        result = new Text("Укажите начальную и конечную дату и нажмите Расчёт");
-        result.setFont(new Font(14));
         BorderPane pane = new BorderPane();
-
+        otstup = new Text("               ");
         raschet.addEventHandler(MouseEvent.MOUSE_CLICKED, new Calculate(dateStart, dateFinal, raschet));
 
-        HBox topMenu = new HBox(10);
-        topMenu.getChildren().addAll(dateStart, dateFinal);
+        HBox border = new HBox(10);
+        border.getChildren().addAll(otstup, raschet);
 
-        pane.setTop(topMenu);
-        pane.setCenter(raschet);
-        pane.setBottom(result);
-        Scene scene = new Scene(pane, 400, 100);
+        pane.setTop(dateStart);
+        pane.setLeft(dateFinal);
+        pane.setBottom(border);
+        Scene scene = new Scene(pane, 175, 100);
         primaryStage.setTitle("Расчёт количества дней между датами");
         primaryStage.setScene(scene);
         primaryStage.show();

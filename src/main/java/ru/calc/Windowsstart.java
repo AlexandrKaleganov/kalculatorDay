@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 
 /**
  * @author Alexander Kaleganov +79139007067
+ * расчёт количества дней меду датами
  * @since 02.05.2018
  */
 
